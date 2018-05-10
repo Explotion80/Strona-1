@@ -10,19 +10,6 @@
     visibility: hidden;
     transition: all .3s;
 
-    @include respond(phone) {
-        width: 50%;
-        height: 10vh;
-    }
-
-
-    @supports(-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
-        -webkit-backdrop-filter: blur(10px);
-        -moz-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
-        background-color: rgba($color-black, .3);
-    }
-
     @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
         -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
@@ -41,19 +28,11 @@
         opacity: 0;
         transform: translate(-50%, -50%) scale(.25);
         transition: all .5s .2s;
-
-        @include respond(tab-port) {
-            width: 50%;
-        }
     }
 
     &__left {
         width: 33.333333%;
         display: table-cell;
-
-        @include respond(phone) {
-            width: 20%;
-        }
     }
 
     &__right {
@@ -61,20 +40,11 @@
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 5rem;
-
-        @include respond(tab-port) {
-            width: 40%;
-            padding: 2rem 4rem;
-        }
     }
 
     &__img {
         display: block;
         width: 100%;
-
-        @include respond(tab-port) {
-            width: 50%;
-        }
     }
 
     &__text {
@@ -93,11 +63,6 @@
         -ms-hyphens: auto;
         -webkit-hyphens: auto;
         hyphens: auto;
-
-        @include respond(tab-port) {
-            font-size: 1rem;
-            margin-bottom: 3rem;
-        }
     }
 
     //Open states
@@ -123,12 +88,6 @@
             display: inline-block;
             transition: all .2s;
             line-height: 1;
-
-            @include respond(tab-port) {
-                top: 1rem;
-                right: 1rem;
-                font-size: 1rem;
-            }
         }
 
         &:hover {
